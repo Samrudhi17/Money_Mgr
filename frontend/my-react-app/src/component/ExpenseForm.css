@@ -1,0 +1,248 @@
+/* Main page */
+.expense-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 48px 20px;
+    background: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Form container */
+.expense-form-container {
+    width: 100%;
+    max-width: 560px;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+/* Header */
+.expense-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.expense-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ecfdf5;
+    color: #059669;
+    border-radius: 12px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.expense-header h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #111827;
+}
+
+.expense-header p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+/* Divider */
+.expense-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 24px 0;
+}
+
+/* Form layout */
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.required {
+    color: #dc2626;
+}
+
+.optional {
+    margin-left: 8px;
+    color: #9ca3af;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 46px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.form-group small {
+    margin-top: 7px;
+    color: #9ca3af;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Amount field */
+.amount-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.amount-input-wrapper .currency-symbol {
+    position: absolute;
+    left: 14px;
+    color: #6b7280;
+    font-size: 17px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.amount-input-wrapper input {
+    padding-left: 36px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Submit button */
+.expense-submit-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #059669;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.expense-submit-button:hover:not(:disabled) {
+    background: #047857;
+}
+
+.expense-submit-button:active:not(:disabled) {
+    transform: scale(0.99);
+}
+
+.expense-submit-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Footer */
+.form-footer {
+    margin: -8px 0 0;
+    color: #9ca3af;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    .expense-page {
+        padding: 24px 14px;
+    }
+
+    .expense-form-container {
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+
+    .expense-header {
+        gap: 12px;
+    }
+
+    .expense-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 23px;
+    }
+
+    .expense-header h1 {
+        font-size: 21px;
+    }
+
+    .expense-header p {
+        font-size: 13px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
